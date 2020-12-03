@@ -1,0 +1,12 @@
+struct rec {
+  void *addr;
+  unsigned int nr;
+};
+
+struct recs {
+  unsigned int count;
+  struct rec rec_array[]; //= struct rec rec_array[0];
+};
+
+want to malloc N 'struct rec';
+struct recs *recs = malloc(sizeof(struct recs) + N * sizeof(struct rec ));
