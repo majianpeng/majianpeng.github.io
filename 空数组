@@ -1,3 +1,5 @@
+C99 allows to define a flexible array member as the last member of a struct
+
 struct rec {
   void *addr;
   unsigned int nr;
