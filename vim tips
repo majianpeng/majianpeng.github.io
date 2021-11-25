@@ -1,0 +1,3 @@
+终端打开位置
+默认使用 “:terminal”或者 “:term”命令可以打开新的终端窗口，不过是在当前窗口上面分出一个split 来，你还可以横向切割 “:vert term”可以横向切分出终端窗口来，
+或者“:tab term”在新的标签页打开终端窗口。同时可以配合位置修饰符指定横向切割时 ":leftabove vert term" 在左打开新终端窗口，":rightbelow vert term" 在右打开新终端窗口。
