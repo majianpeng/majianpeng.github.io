@@ -1,0 +1,23 @@
+
+Write Atomicity (non-powerfail)
+• At what granularity do writes become visible to other
+accesses
+• Block I/O
+• File I/O
+• Stores
+• Powerfail Write Atomicity
+• At what granularity are writes interruptible by power
+failure
+• Block I/O
+• File I/O
+• Stores
+
+
+NVME SPEC
+a: awun
+b: awupf
+>
+
+see ppt :Write Atomicity and NVM Drive Design
+https://www.spinics.net/lists/linux-xfs/msg38859.html
+https://lwn.net/Articles/789600/
