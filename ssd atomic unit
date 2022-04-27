@@ -16,7 +16,10 @@ failure
 NVME SPEC
 a: awun
 b: awupf
->
+问题
+1：基于LBA？
+2：如果LBA存在多个值：512B 4096B，那么如何处理？
+
 
 see ppt :Write Atomicity and NVM Drive Design
 https://www.spinics.net/lists/linux-xfs/msg38859.html
