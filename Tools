@@ -3,3 +3,6 @@ tig
 tmux
 vim
 ccmake/cmake
+htop
+glances
+nmon
