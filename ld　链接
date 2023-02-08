@@ -13,3 +13,7 @@ LD_DEBUG
    ”statistics“显示动态链接过程中的各种统计信息。
    ”all“显示以上所有信息。
    ”help“显示上面的各种可选值的帮助信息。
+   
+   
+   
+ How do I find out what all symbols are exported from a shared object?
