@@ -1,5 +1,6 @@
 ld.so.conf
 ldconfig
+ls.so
 LD_LIBRARY_PATH
 LD_PRELOAD
 LD_DEBUG
