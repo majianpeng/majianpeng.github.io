@@ -1,0 +1,14 @@
+ld.so.conf
+ldconfig
+LD_LIBRARY_PATH
+LD_PRELOAD
+LD_DEBUG
+   动态链接器打印出了整个装载过程，显示程序依赖与哪个共享库，并且按照什么步骤来装载和初始化，共享库装载时的地址等。LD_DEBUG环境变量还可以设置成其他值，比如：
+   “bindings”显示动态链接的符号绑定过程。
+   "libs"显示共享库的查找过程。
+   “versions”显示符号的版本依赖关系。
+   “reloc“显示重定位过程。
+   ”symbols“显示符号表查找过程。
+   ”statistics“显示动态链接过程中的各种统计信息。
+   ”all“显示以上所有信息。
+   ”help“显示上面的各种可选值的帮助信息。
