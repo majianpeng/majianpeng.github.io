@@ -6,10 +6,21 @@
    2：最好可以处理：自己实现容易出现bug
    3：详细的例子来展示如何使用
 
-      
+
+CPU 需要收集的信息
+DISK需要收集的信息
+Memory需要收集的信息
+Network需要收集的信息
+process 需要的信息
+
+Why would I monitor summary data?(Note)
+   https://collectl.sourceforge.net/WhySummary.html
 
 sar
 collectll
+  https://collectl.sourceforge.net/
+     examples:https://collectl.sourceforge.net/Examples.html
+     (Note)Command Equivalence Matrix：https://collectl.sourceforge.net/Matrix.html
   https://collectl.sourceforge.net/FAQ-collectl.html
 Performance Co-Pilot (PCP)
   https://access.redhat.com/articles/1145953
