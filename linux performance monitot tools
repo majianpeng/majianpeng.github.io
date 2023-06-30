@@ -1,0 +1,15 @@
+目的:
+   一个工具可以将系统的性能数据：disk，cpu，memory，network，numa，process都可以收集，同时可以处理，生成csv或者类似的工具。
+   不是像iostat，numastat，mpstat只能处理某种资源的工具。当然需要比较集成工具和专有工具的差别，是否覆盖专有工具的所有功能。
+要求
+   1：必须要收集的信息（对比专有工具的收集信息即可）：比如每一个core的使用率；而不是只能收集系统cpu平均使用率；
+   2：最好可以处理：自己实现容易出现bug
+   3：详细的例子来展示如何使用
+
+      
+
+sar
+collectll
+  https://collectl.sourceforge.net/FAQ-collectl.html
+Performance Co-Pilot (PCP)
+  https://access.redhat.com/articles/1145953
