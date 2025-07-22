@@ -3,7 +3,15 @@
 2：SPDK：nvme 驱动和nvme-over tcp关于tcp的部分
 
 数据库
-1：leveldb
+1：leveldb: LSB
 2：rocksdb
-3：SQL优化部分
+3：基于kvdb的sql 如何实现/已经如何优化：https://build-your-own.org/database/
+
+文件系统
+1:Btree: F2FS
+2:ext4
+
+分布式（论文为主)
+1：cephfs 源码来理解原理)
+2：HDFS
 
