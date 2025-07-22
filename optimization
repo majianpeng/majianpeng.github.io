@@ -1,0 +1,9 @@
+应用程序参考
+1：DPDK（深入浅出DPDK书：无锁数据结构/与硬件相关的优化）
+2：SPDK：nvme 驱动和nvme-over tcp关于tcp的部分
+
+数据库
+1：leveldb
+2：rocksdb
+3：SQL优化部分
+
