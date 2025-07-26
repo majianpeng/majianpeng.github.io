@@ -29,6 +29,10 @@ cpu
 
 2:vtune
 
+3: perf 
+   perf list metricgroup
+   perf-c2c: https://s3.amazonaws.com/ben.england/false-sharing_findings.pdf
+
 cache:
 1: baceh
 2: facebook cachelib:https://www.usenix.org/system/files/osdi20-berg.pdf
