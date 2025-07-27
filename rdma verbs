@@ -16,5 +16,6 @@ This  call  should  only  be  used on rdma_cm_id's that do not share CQs with ot
          ibv_ack_cq_event
    3.3 因为ibv_get_cq_event是阻塞的，当然可以改成非阻塞： rc = fcntl(channel->fd, F_SETFL, flags | O_NONBLOCK);
    3.4 用3.3非阻塞往往是thread 还有其他fd，所以用epoll_ctl(add, channel-fd， POLLIN）这样就可以在一个thread 处理rdma 和非rdma 事件
+       3.4.1 这里还有一个问题ibv_get_cq_event是没有timeout的机制，所以只有polling 和死等两个模式。如果想用timeout机制就必须要用epoll_wait+timeout 
 4：rdma_create_id也使用event_channel 但是不是为了send/recv cq，是为了CM的event. 
    4.1 rdma_get_event_channel 
