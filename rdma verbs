@@ -1,0 +1,20 @@
+man rdma 发现：
+1：没有rdma_ verbs 可以创建CQ，都是通过ibv_create_cq or ibv_create_cq_ext去创建
+2：get send/recv complete event 都是同步API： rdma_get_send_comp/rmda。如果没有event 会一直阻塞。特别是from man rdma_get_send_comp/rdma_get_recv_comp
+“ This calls polls the receive completion queue associated with an rdma_cm_id.  If a completion is not found, the call blocks until a request completes. 
+This  call  should  only  be  used on rdma_cm_id's that do not share CQs with other rdma_cm_id's, and maintain separate CQs for sends and receive completions.”
+3：实际上rdma vers 的send/recv cq 都是通过ibv_poll_cq 或者 ibv_get_cm_event
+  3.1： ibv_poll_cq 是轮询不会block。是属于busy polling的模式，如果不想这种模式
+  3.2： ibv_get_cq_event:是同步API可以
+        ibv_get_cq_event-->wait util 
+        ibv_req_notify_cq
+            1.1： 刚刚创建cq w/ event_channel 用这个API将cq 加入event_channel，保证ibv_get_cq_event可以获取cq的events 产生
+            1.2： ibv_req_notify_cq 类似epoll_ctl(add,   EPOLLONESHOT) 只要检测到cq 事件产生，就需要再次加入event_channle.不是MULTISHORT
+        while (ibv_poll_cq) {
+          do something;
+          }
+         ibv_ack_cq_event
+   3.3 因为ibv_get_cq_event是阻塞的，当然可以改成非阻塞： rc = fcntl(channel->fd, F_SETFL, flags | O_NONBLOCK);
+   3.4 用3.3非阻塞往往是thread 还有其他fd，所以用epoll_ctl(add, channel-fd， POLLIN）这样就可以在一个thread 处理rdma 和非rdma 事件
+4：rdma_create_id也使用event_channel 但是不是为了send/recv cq，是为了CM的event. 
+   4.1 rdma_get_event_channel 
