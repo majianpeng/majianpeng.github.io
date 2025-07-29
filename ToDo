@@ -33,15 +33,23 @@ cpu
 3: perf 
    perf list metricgroup
    perf-c2c: https://s3.amazonaws.com/ben.england/false-sharing_findings.pdf
+4:《普林斯顿大学-计算机体系结构 Computer Architecture》
+《计算机组成与设计：软 / 硬件接口》
+《超标量处理器》
+《计算机体系结构：量化研究方法》
+《RISC-V手册，一本开源指令集的指南》
 
-cache:
-1: baceh
+storage cache:
+1: bcache
 2: facebook cachelib:https://www.usenix.org/system/files/osdi20-berg.pdf
 
 
 Kernel
 1:https://cppguide.cn/pages/the-kernel-in-the-mind-contents/
 2:Linux内核的零拷贝实现 https://zhuanlan.zhihu.com/p/1931771322465256698
+
+
+
 
 
 
